@@ -1,0 +1,70 @@
+8
+
+dir
+3
+svn+ssh://mwhuss@rubyforge.org/var/svn/contactcsv/trunk/website
+svn+ssh://mwhuss@rubyforge.org/var/svn/contactcsv
+
+
+
+2008-02-07T04:15:34.012804Z
+3
+mwhuss
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+0f1555d2-31b4-4cd0-8ff5-c2ba47292008
+
+template.rhtml
+file
+
+
+
+
+2008-02-07T03:49:03.000000Z
+060a313e053c3f144243a3690a04319a
+2008-02-07T04:15:34.012804Z
+3
+mwhuss
+
+index.txt
+file
+5
+
+
+
+2008-02-08T03:09:11.000000Z
+2471f6f9639402556549dc599fbafcef
+2008-02-08T03:13:20.061011Z
+5
+mwhuss
+
+javascripts
+dir
+
+index.html
+file
+9
+
+
+
+2008-02-08T04:47:50.000000Z
+6f698173a9d89ddcfaf7e08b0adcb78c
+2008-02-08T04:42:16.640029Z
+9
+mwhuss
+
+stylesheets
+dir
+

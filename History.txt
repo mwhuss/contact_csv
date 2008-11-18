@@ -1,0 +1,10 @@
+== 0.2.0 2008-02-07
+
+* 1 major enhancement
+  * Removed the Importer class because it wasn't needed. Added the functionality to the ContactManager class
+  * Beefed up the documentation
+
+== 0.1.0 2008-02-05
+
+* 1 major enhancement:
+  * Initial release

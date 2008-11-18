@@ -1,0 +1,54 @@
+h1. ContactCsv
+
+h1. &#x2192; 'contact_csv'
+
+
+h2. What
+
+Simple gem for reading, using "FasterCSV":http://fastercsv.rubyforge.org/, in contact CSV files that you can export from email clients like Outlook or GMail. It currently supports Outlook CSV (Windows) contacts out of the box. The importer will automatically search for the appropriate lookup table to map csv columns to Contact object attributes. This means you can import multiple CSV formats and still deal with one object type. This can be extended to any format files by using the LookupTable class. The "rdoc":http://contactcsv.rubyforge.org/rdoc/ is sparse at the moment but I will continue to beef it up.
+
+
+h2. Installing
+
+<pre syntax="ruby">sudo gem install contact_csv</pre>
+
+
+h2. The basics
+
+
+h3. Demonstration of usage
+
+<code>require 'contact_csv'</code>
+<br />
+<code>contacts = ContactCsv::Importer.parse("some,csv,string")</code><br />
+or<br />
+<code>contacts = ContactCsv::Importer.read("/path/to/contacts.csv")  #=> Array of Contact objects</code><br /><br />
+<code>contacts.first.first_name   #=> "Marshall"</code><br />
+<code>contacts.first.last_name    #=> "Huss"</code><br />
+<code>contacts.first.email        #=> "mwhuss@gmail.com"</code>
+
+The contact object won't contain every attribute thats in a contacts file, only the commonly used ones.
+
+<code>contacts.first.extras['Spouse']   #=> "Jenifer"</code>
+
+h2. Forum
+
+For now please use the "Rubyforge Forums":http://rubyforge.org/forum/?group_id=5488.
+
+
+h2. How to help
+
+If you would like to help with this project shoot me an "email":mailto:mwhuss@gmail.com.
+
+The trunk repository is <code>svn://rubyforge.org/var/svn/contact_csv/trunk</code> for anonymous access.
+
+
+h2. License
+
+This code is free to use under the terms of the "MIT license":http://www.opensource.org/licenses/mit-license.php. 
+
+
+h2. Contact
+
+Comments are welcome. Send an email to "Marshall Huss":mailto:mwhuss@gmail.com or post on the "forum":http://rubyforge.org/forum/?group_id=5488
+

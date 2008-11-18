@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <link rel="stylesheet" href="stylesheets/screen.css" type="text/css" media="screen" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>
+      ContactCsv
+  </title>
+  <script src="javascripts/rounded_corners_lite.inc.js" type="text/javascript"></script>
+<style>
+
+</style>
+  <script type="text/javascript">
+    window.onload = function() {
+      settings = {
+          tl: { radius: 10 },
+          tr: { radius: 10 },
+          bl: { radius: 10 },
+          br: { radius: 10 },
+          antiAlias: true,
+          autoPad: true,
+          validTags: ["div"]
+      }
+      var versionBox = new curvyCorners(settings, document.getElementById("version"));
+      versionBox.applyCornersToAll();
+    }
+  </script>
+</head>
+<body>
+<div id="main">
+
+    <h1>ContactCsv</h1>
+    <div id="version" class="clickable" onclick='document.location = "http://rubyforge.org/projects/contact_csv"; return false'>
+      <p>Get Version</p>
+      <a href="http://rubyforge.org/projects/contact_csv" class="numbers">0.2.0</a>
+    </div>
+    <h1>&#x2192; &#8216;contact_csv&#8217;</h1>
+
+
+	<h2>What</h2>
+
+
+	<p>Simple gem for reading, using <a href="http://fastercsv.rubyforge.org/">FasterCSV</a>, in contact <span class="caps">CSV</span> files that you can export from email clients like Outlook or GMail. It currently supports Outlook <span class="caps">CSV</span> (Windows) contacts out of the box. The importer will automatically search for the appropriate lookup table to map csv columns to Contact object attributes. This means you can import multiple <span class="caps">CSV</span> formats and still deal with one object type. This can be extended to any format files by using the LookupTable class. The <a href="http://contactcsv.rubyforge.org/rdoc/">rdoc</a> is sparse at the moment but I will continue to beef it up.</p>
+
+
+	<h2>Installing</h2>
+
+
+	<p><pre class='syntax'><span class="ident">sudo</span> <span class="ident">gem</span> <span class="ident">install</span> <span class="ident">contact_csv</span></pre></p>
+
+
+	<h2>The basics</h2>
+
+
+	<h3>Demonstration of usage</h3>
+
+
+<code>require 'contact_csv'</code>
+<br />
+<code>contacts = ContactCsv::Importer.parse("some,csv,string")</code><br />
+or<br />
+<code>contacts = ContactCsv::Importer.read("/path/to/contacts.csv")  #=&gt; Array of Contact objects</code><br /><br />
+<code>contacts.first.first_name   #=&gt; "Marshall"</code><br />
+<code>contacts.first.last_name    #=&gt; "Huss"</code><br />
+<code>contacts.first.email        #=&gt; "mwhuss@gmail.com"</code>
+
+	<p>The contact object won&#8217;t contain every attribute thats in a contacts file, only the commonly used ones.</p>
+
+
+<code>contacts.first.extras['Spouse']   #=&gt; "Jenifer"</code>
+
+	<h2>Forum</h2>
+
+
+	<p>For now please use the <a href="http://rubyforge.org/forum/?group_id=5488">Rubyforge Forums</a>.</p>
+
+
+	<h2>How to help</h2>
+
+
+	<p>If you would like to help with this project shoot me an <a href="mailto:mwhuss@gmail.com">email</a>.</p>
+
+
+	<p>The trunk repository is <code>svn://rubyforge.org/var/svn/contact_csv/trunk</code> for anonymous access.</p>
+
+
+	<h2>License</h2>
+
+
+	<p>This code is free to use under the terms of the <a href="http://www.opensource.org/licenses/mit-license.php"><span class="caps">MIT</span> license</a>.</p>
+
+
+	<h2>Contact</h2>
+
+
+	<p>Comments are welcome. Send an email to <a href="mailto:mwhuss@gmail.com">Marshall Huss</a> or post on the <a href="http://rubyforge.org/forum/?group_id=5488">forum</a></p>
+    <p class="coda">
+      <a href="mailto:mwhuss@gmail.com">Marshall Huss</a>, 7th February 2008<br>
+      Theme extended from <a href="http://rb2js.rubyforge.org/">Paul Battley</a>
+    </p>
+</div>
+
+<!-- insert site tracking codes here, like Google Urchin -->
+
+</body>
+</html>

@@ -27,7 +27,7 @@ h2. Lookup Tables
 
 A lookup table is used to map the csv columns to Contact class attributes. You can create your own lookup tables by using the LookupTable class and passing it in inside an array to the ContactManager class.
 
-	# These are the column headers in the csv
+	These are the column headers in the csv
 	headers = ["First Name","Last Name","Email Address"]
 
 	# These map the column headers to the attribute of the Contact class
@@ -49,6 +49,7 @@ If you think you have composed a good lookup table email it to me (mwhuss@gmail.
 
 
 h2. To Do
+
 * Add lookup table for Outlook 2003 CSV (DOS)
 * Add lookup table for GMail CSV
 
